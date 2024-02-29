@@ -1,6 +1,6 @@
-https://studio-yarrr.github.io/website-avto/dist/
+https://studio-yarrr.github.io/website-promtehcomplect/dist/
 
-[Pages](https://studio-yarrr.github.io/website-avto/dist/)
-[Figma](https://www.figma.com/file/VHmhC3TKCVxNwVUeTbDrfO/тачки?type=design&mode=design&t=1znCrJpnQj9YpyUc-0)
+[Pages](https://studio-yarrr.github.io/website-promtehcomplect/dist/)
+[Figma](https://www.figma.com/file/X6bASBbgbIteiA4e9fe3jF/АО-«ПРОМТЕХКОМПЛЕКТ»-(Copy)?mode=dev)
 
 
