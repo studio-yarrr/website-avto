@@ -1,0 +1,111 @@
+.selection {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    .next-button {
+        margin-left: auto;
+    }
+
+}
+
+.selection__title {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 54rem;
+
+    .alert-button {
+        margin-left: auto;
+    }
+
+    h2 {
+        color: var(--black);
+        font-family: Radiotechnika;
+        font-size: 4.8rem;
+        font-weight: 400;
+        line-height: 135%;
+        letter-spacing: 0%;
+    }
+}
+
+.selection__tabs {
+    display: flex;
+    gap: 2rem;
+}
+
+.selection__tabs-buttons {
+    button {
+        background: none;
+        border: none;
+        color: var(--black);
+        font-family: Geologica;
+        font-size: 2.8rem;
+        font-weight: 200;
+        line-height: 135%;
+        letter-spacing: 0%;
+
+        &.--active {
+            color: var(--light-blue);
+        }
+    }
+
+    div {
+        display: none;
+    }
+}
+
+.selection__tabs-content {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 3rem;
+    row-gap: 2rem;
+
+    .custom-select {
+        position: relative;
+        width: 38.4rem;
+    }
+
+    .custom-select select {
+        display: none;
+    }
+
+    .select-trigger {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border: 0.1rem solid rgb(162, 162, 162);
+        border-radius: 1rem;
+        padding: 1.2rem 3rem;
+        cursor: pointer;
+
+        color: var(--black);
+        font-size: 2.4rem;
+        font-weight: 200;
+        line-height: 135%;
+        letter-spacing: 0%;
+        text-align: center;
+    }
+
+    .select-options {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: none;
+    }
+
+    .select-options li {
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .select-options li:hover {
+        background-color: #f2f2f2;
+    }
+}

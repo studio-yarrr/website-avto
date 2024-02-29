@@ -1,0 +1,57 @@
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "vendor/reset";
+
+html {
+  box-sizing: border-box;
+  font-size: calc(100vw / 1920 * 10);
+
+  @include breakpoint($xl-bp) {
+    font-size: calc(100vw / 1024 * 10);
+  }
+
+  @include breakpoint($sm-bp) {
+    font-size: calc(100vw / 375 * 10);
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  font-family: Geologica;
+}
+
+.page-padding {
+  padding-left: 13.5rem;
+  padding-right: 13.5rem;
+}
+
+.mt-20 {
+  margin-top: 20rem;
+}
+
+.mt-7 {
+  margin-top: 7rem
+}
+
+.mt-16 {
+  margin-top: 16rem
+}
+
+@import './blocks/header.scss';
+@import './blocks/swiper.scss';
+@import './blocks/footer.scss';
+@import './blocks/main.scss';
+@import './blocks/main-title-block.scss';
+@import './blocks/car-types.scss';
+@import './blocks/alert-button.scss';
+@import './blocks/next-button.scss';
+@import './blocks/selection.scss';
+@import './blocks/catalog-block.scss';
+@import './blocks/mission.scss';

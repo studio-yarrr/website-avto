@@ -1,0 +1,151 @@
+.catalog-block {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.catalog-block__tabs {
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+
+    .next-button {
+        margin-left: auto;
+    }
+}
+
+.catalog-block__tabs-buttons {
+
+    button {
+        background: none;
+        border: none;
+
+        color: var(--black);
+        font-family: Geologica;
+        font-size: 2.8rem;
+        font-weight: 200;
+        line-height: 135%;
+        letter-spacing: 0%;
+
+        &.--active {
+            color: var(--light-blue);
+        }
+
+
+    }
+
+    div {
+        display: none;
+    }
+
+
+}
+
+
+.catalog-block__tabs-content {
+    display: flex;
+    gap: 3rem;
+}
+
+.catalog-block__item {
+    width: 39rem;
+    border-radius: 1rem;
+    box-shadow: 3px 4px 3px 0px rgba(0, 0, 0, 0.25), 0px 1px 4px 0px rgba(0, 0, 0, 0.4), 6px 6px 2px 0px rgba(0, 0, 0, 0.05);
+}
+
+.catalog-block__item-img {
+    position: relative;
+
+    .--green {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        border-radius: 1rem 0px 1rem 1rem;
+        backdrop-filter: blur(0.8rem);
+        background: rgba(11, 201, 30, 0.7);
+        color: var(--white);
+        font-size: 1.8rem;
+        font-weight: 300;
+        line-height: 2.3rem;
+        letter-spacing: 0%;
+        padding: 1rem 2.4rem;
+
+    }
+
+    .--blue {
+        position: absolute;
+        z-index: 2;
+        right: 0.8rem;
+        top: 0.8rem;
+        border-radius: 0.5rem;
+        background: var(--light-blue);
+        padding: 0.6rem 0.8rem;
+
+        color: var(--white);
+        font-size: 1.2rem;
+        font-weight: 500;
+        line-height: 1.5rem;
+        letter-spacing: 0%;
+        text-transform: uppercase;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.catalog-block__item-title {
+    padding: 2rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    h3 {
+        color: var(--black);
+        font-size: 2rem;
+        font-weight: 300;
+        line-height: 2.5rem;
+        letter-spacing: 0%;
+    }
+
+    p {
+        color: var(--black);
+        font-size: 2.4rem;
+        font-weight: 100;
+        line-height: 3rem;
+        letter-spacing: 0%;
+    }
+}
+
+.catalog-block__item-params {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem 0;
+
+    border-top: 0.1rem solid rgb(37, 35, 45, 0.2);
+
+    div {
+        display: flex;
+        gap: 0.6rem;
+        align-items: center;
+
+        svg {
+            width: 3rem;
+            height: 2.5rem;
+            fill: transparent;
+        }
+
+        p {
+            color: var(--black);
+            font-size: 1.8rem;
+            font-weight: 100;
+            line-height: 2.3rem;
+            letter-spacing: 0%;
+        }
+    }
+}
