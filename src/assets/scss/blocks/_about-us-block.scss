@@ -1,0 +1,113 @@
+.about-us-block {
+    h2 {
+        color: var(--black);
+        font-family: Radiotechnika;
+        font-size: 4.8rem;
+        font-weight: 400;
+        line-height: 135%;
+        letter-spacing: 0%;
+    }
+
+
+}
+
+.about-us-block__content {
+    margin-top: 5rem;
+    display: flex;
+    gap: 3rem;
+    justify-content: space-between;
+}
+
+.about-us-block__content-img {
+    width: 49%;
+    border-radius: 1rem;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.about-us-block__content-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 47%;
+
+    h3 {
+        color: var(--black);
+        font-size: 2.8rem;
+        font-weight: 400;
+        line-height: 135%;
+        letter-spacing: 0%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+
+        a {
+            border: 0.2rem solid var(--light-blue);
+            border-radius: 2rem;
+            color: rgb(40, 189, 220);
+            font-family: Geologica;
+            font-size: 2rem;
+            font-weight: 500;
+            line-height: 135%;
+            letter-spacing: 0%;
+            padding: 0.5rem 3rem;
+        }
+    }
+
+    p {
+        color: var(--black);
+        font-family: Geologica;
+        font-size: 2.4rem;
+        font-weight: 200;
+        line-height: 135%;
+        letter-spacing: 0%;
+
+        a {
+            display: inline;
+            color: var(--light-blue);
+            text-decoration: underline;
+        }
+    }
+}
+
+.brands {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5rem;
+    gap: 14rem;
+}
+
+.brands-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 32%;
+
+    p:first-of-type {
+        color: var(--black);
+        font-family: Radiotechnika;
+        font-size: 4.8rem;
+        font-weight: 400;
+        line-height: 135%;
+        letter-spacing: 0%;
+
+        span {
+            font-size: 8rem;
+        }
+    }
+
+    p:last-of-type {
+        color: var(--black);
+        font-size: 2rem;
+        font-weight: 200;
+        line-height: 135%;
+        letter-spacing: 0%;
+    }
+}

@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 :root {
     --blue: #0075BF;
     --light-blue: rgb(40, 189, 220);
@@ -10,6 +12,12 @@
     --green: rgb(11, 201, 30);
 }
 
+@font-face {
+    font-family: Radiotechnika;
+  src: url("../fonts/radiotechnika.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0-modified | 20110126
    License: none (public domain)
@@ -1450,6 +1458,142 @@ button.swiper-pagination-bullet {
     overflow: hidden;
 }
 
+footer {
+    background: rgb(240, 240, 240);
+    padding-top: 6rem;
+    padding-bottom: 2.5rem;
+}
+
+.footer__content {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.footer__content > ul {
+    width: 50%;
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+}
+
+.footer__content > ul li {
+    color: var(--black);
+    font-size: 2rem;
+    font-weight: 100;
+    line-height: 2.5rem;
+    letter-spacing: 0%;
+    margin-top: 2rem;
+}
+
+.footer__content > ul li:first-child {
+    margin-top: 0rem;
+}
+
+.footer__content > ul li a {
+    color: var(--black);
+    font-size: 2rem;
+    font-weight: 100;
+    line-height: 2.5rem;
+    letter-spacing: 0%;
+}
+
+.footer__content-logo {
+    width: 27rem;
+}
+
+.footer__content-logo svg {
+    width: 100%;
+}
+
+.footer__content-links {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.footer__content-links > a {
+    color: var(--black);
+    font-family: Geologica;
+    font-size: 3.2rem;
+    font-weight: 200;
+    line-height: 4rem;
+    letter-spacing: 0%;
+    text-decoration: underline;
+}
+
+.footer__content-links > a:first-child {
+    text-decoration: none;
+}
+
+.footer__content-links > div {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: end;
+    justify-content: end;
+    -ms-flex-align: end;
+    align-items: end;
+    gap: 2rem;
+}
+
+.footer__content-links > div p {
+    color: rgb(154, 154, 154);
+    font-family: Geologica;
+    font-size: 1.6rem;
+    font-weight: 200;
+    line-height: 1.7rem;
+    letter-spacing: 0%;
+}
+
+.footer__content-links > div ul {
+    display: -ms-flexbox;
+    display: flex;
+    gap: 5rem;
+}
+
+.footer__content-links > div ul a {
+    width: 4rem;
+    height: 4rem;
+    opacity: 0.6;
+}
+
+.footer__content-links > div ul a svg {
+    width: 100%;
+    height: 100%;
+}
+
+.footer__description {
+    padding-top: 5rem;
+    padding-bottom: 3.5rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.footer__description a,
+.footer__description p {
+    color: var(--black);
+    font-family: Geologica;
+    font-size: 2rem;
+    font-weight: 200;
+    line-height: 2.5rem;
+    letter-spacing: 0%;
+}
+
+.footer__description a:first-child {
+    text-decoration: underline;
+}
+
+.footer__description a span {
+    text-decoration: underline;
+}
+
 .main-title-block {
     display: -ms-flexbox;
     display: flex;
@@ -1983,4 +2127,508 @@ button.swiper-pagination-bullet {
     font-weight: 200;
     line-height: 135%;
     letter-spacing: 0%;
+}
+
+.about-us-block h2 {
+    color: var(--black);
+    font-family: Radiotechnika;
+    font-size: 4.8rem;
+    font-weight: 400;
+    line-height: 135%;
+    letter-spacing: 0%;
+}
+
+.about-us-block__content {
+    margin-top: 5rem;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 3rem;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.about-us-block__content-img {
+    width: 49%;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.about-us-block__content-img img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.about-us-block__content-text {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 2rem;
+    width: 47%;
+}
+
+.about-us-block__content-text h3 {
+    color: var(--black);
+    font-size: 2.8rem;
+    font-weight: 400;
+    line-height: 135%;
+    letter-spacing: 0%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+}
+
+.about-us-block__content-text h3 a {
+    border: 0.2rem solid var(--light-blue);
+    border-radius: 2rem;
+    color: rgb(40, 189, 220);
+    font-family: Geologica;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 135%;
+    letter-spacing: 0%;
+    padding: 0.5rem 3rem;
+}
+
+.about-us-block__content-text p {
+    color: var(--black);
+    font-family: Geologica;
+    font-size: 2.4rem;
+    font-weight: 200;
+    line-height: 135%;
+    letter-spacing: 0%;
+}
+
+.about-us-block__content-text p a {
+    display: inline;
+    color: var(--light-blue);
+    text-decoration: underline;
+}
+
+.brands {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    margin-top: 5rem;
+    gap: 14rem;
+}
+
+.brands-text {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 32%;
+}
+
+.brands-text p:first-of-type {
+    color: var(--black);
+    font-family: Radiotechnika;
+    font-size: 4.8rem;
+    font-weight: 400;
+    line-height: 135%;
+    letter-spacing: 0%;
+}
+
+.brands-text p:first-of-type span {
+    font-size: 8rem;
+}
+
+.brands-text p:last-of-type {
+    color: var(--black);
+    font-size: 2rem;
+    font-weight: 200;
+    line-height: 135%;
+    letter-spacing: 0%;
+}
+
+.partners-block h2 {
+    color: var(--black);
+    font-family: Radiotechnika;
+    font-size: 4.8rem;
+    font-weight: 400;
+    line-height: 135%;
+    letter-spacing: 0%;
+}
+
+.partners-block ul {
+    display: -ms-flexbox;
+    display: flex;
+    gap: 3rem;
+    margin-top: 4rem;
+}
+
+.partners-block ul li a {
+    padding: 3rem;
+    border: 0.2rem solid var(--light-blue);
+    border-radius: 1rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 4rem;
+    width: 39rem;
+    height: 31.5rem;
+}
+
+.partners-block ul li a p {
+    color: var(--light-blue);
+    font-size: 2.4rem;
+    font-weight: 200;
+    line-height: 135%;
+    letter-spacing: 0%;
+}
+
+.answers h2 {
+    color: var(--black);
+    font-family: Radiotechnika;
+    font-size: 4.8rem;
+    font-weight: 400;
+    line-height: 135%;
+    letter-spacing: 0%;
+}
+
+.answers__content {
+    margin-top: 4.5rem;
+}
+
+.answers__content > div {
+    border-bottom: 0.1rem solid rgba(37, 35, 45, 0.4);
+    padding-bottom: 2rem;
+    padding-top: 3rem;
+}
+
+.accordion {
+    cursor: pointer;
+    width: 100%;
+    transition: 0.4s;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    background: none;
+    border: none;
+}
+
+.accordion.--active span:last-child {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.accordion span:first-child {
+    color: var(--black);
+    font-family: Geologica;
+    font-size: 2.8rem;
+    font-weight: 300;
+    line-height: 135%;
+    letter-spacing: 0%;
+}
+
+.accordion span:last-child {
+    background: var(--light-blue);
+    width: 4.6rem;
+    height: 4.6rem;
+    border-radius: 50%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.accordion span:last-child svg {
+    stroke: var(--white);
+    width: 1rem;
+    height: 2rem;
+}
+
+.panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.panel p {
+    color: var(--black);
+    font-family: Geologica;
+    font-size: 2.4rem;
+    font-weight: 200;
+    line-height: 135%;
+    letter-spacing: 0%;
+    width: 70%;
+}
+
+.connection {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.connection__info {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 38%;
+}
+
+.connection__info h2 {
+    color: var(--black);
+    font-family: Radiotechnika;
+    font-size: 4.8rem;
+    font-weight: 400;
+    line-height: 135%;
+    letter-spacing: 0%;
+}
+
+.connection__location {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.connection__location h3 {
+    color: var(--black);
+    font-size: 3.6rem;
+    font-weight: 300;
+    line-height: 4.5rem;
+    letter-spacing: 0%;
+}
+
+.connection__location p {
+    color: var(--black);
+    font-size: 2.4rem;
+    font-weight: 200;
+    line-height: 3rem;
+    letter-spacing: 0%;
+}
+
+.connection__location p span {
+    font-weight: 400;
+}
+
+.connection__links {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.connection__links > a {
+    color: var(--black);
+    font-size: 3.6rem;
+    font-weight: 200;
+    line-height: 4.5rem;
+    letter-spacing: 0%;
+    text-decoration: underline;
+}
+
+.connection__links > a:first-child {
+    text-decoration: none;
+}
+
+.connection__links ul {
+    display: -ms-flexbox;
+    display: flex;
+    gap: 4rem;
+}
+
+.connection__links ul li a {
+    width: 5rem;
+    height: 5rem;
+}
+
+.connection__links ul li a svg {
+    width: 100%;
+    height: 100%;
+}
+
+.connection__form {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 3rem;
+    width: 48%;
+  /* создание в label псевдоэлемента before со следующими стилями */
+  /* стили для чекбокса, находящегося в состоянии checked */
+  /* стили для чекбокса, находящегося в состоянии disabled */
+}
+
+.connection__form h3 {
+    color: var(--black);
+    font-size: 3.2rem;
+    font-weight: 200;
+    line-height: 4rem;
+    letter-spacing: 0%;
+}
+
+.connection__form > input {
+    color: var(--black);
+    font-size: 2.4rem;
+    font-weight: 200;
+    line-height: 3rem;
+    letter-spacing: 0%;
+    border: none;
+    padding-bottom: 1rem;
+    border-bottom: 0.1rem solid rgba(37, 35, 45, 0.4);
+    outline: none;
+}
+
+.connection__form > input::-webkit-input-placeholder {
+    opacity: 0.5;
+}
+
+.connection__form > input:-ms-input-placeholder {
+    opacity: 0.5;
+}
+
+.connection__form > input::-ms-input-placeholder {
+    opacity: 0.5;
+}
+
+.connection__form > input::placeholder {
+    opacity: 0.5;
+}
+
+.connection__form .custom-checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+.connection__form .custom-checkbox + label {
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    color: rgba(37, 35, 45, 0.6);
+    font-family: Geologica;
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 2.3rem;
+    letter-spacing: 0%;
+    cursor: pointer;
+}
+
+.connection__form .custom-checkbox + label::before {
+    content: "";
+    display: inline-block;
+    width: 3.1rem;
+    height: 3.1rem;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+    border: 0.2rem solid var(--black);
+    border-radius: 0.5rem;
+    opacity: 0.4;
+    margin-right: 2rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
+
+.connection__form .custom-checkbox:checked + label::before {
+    background-color: var(--light-blue);
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+}
+
+.connection__form .custom-checkbox:disabled + label::before {
+    background-color: #e9ecef;
+}
+
+.connection__form > button {
+    color: var(--white);
+    font-family: Geologica;
+    font-size: 2.4rem;
+    font-weight: 200;
+    line-height: 3rem;
+    letter-spacing: 0%;
+    border-radius: 1rem;
+    width: 100%;
+    padding: 2rem 0;
+    background: var(--light-blue);
+    border: none;
+}
+
+.connection__form-selects {
+    display: -ms-flexbox;
+    display: flex;
+    gap: 3rem;
+}
+
+.connection__form-selects .custom-select {
+    position: relative;
+    width: 100%;
+}
+
+.connection__form-selects .custom-select select {
+    display: none;
+}
+
+.connection__form-selects .select-trigger {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    border-bottom: 0.1rem solid rgba(37, 35, 45, 0.4);
+    padding-bottom: 1rem;
+    cursor: pointer;
+    color: var(--black);
+    font-family: Geologica;
+    font-size: 2.4rem;
+    font-weight: 200;
+    line-height: 3rem;
+    letter-spacing: 0%;
+    opacity: 0.5;
+}
+
+.connection__form-selects .select-options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.connection__form-selects .select-options li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.connection__form-selects .select-options li:hover {
+    background-color: #f2f2f2;
 }
