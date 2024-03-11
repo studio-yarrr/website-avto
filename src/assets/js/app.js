@@ -60,4 +60,104 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     }
+
+    let tabButtons = document.querySelectorAll('.catalog-block__tabs-buttons button')
+
+    tabButtons.forEach(e => {
+        e.addEventListener('click', el => {
+            e.parentElement.parentElement.nextElementSibling.innerHTML = e.nextElementSibling.innerHTML
+
+            e.parentElement.parentElement.querySelectorAll('.catalog-block__tabs-buttons button').forEach(elem => {
+                elem.classList.remove('--active')
+            })
+
+            e.classList.add('--active')
+
+            let catalogBlockTabsSwiper = new Swiper(".catalog-block__tabs-swiper", {
+                slidesPerView: 4,
+                spaceBetween: 20,
+            });
+        })
+    })
+
+    let catalogTabsBlock = document.querySelectorAll('.catalog-block__tabs')
+
+    catalogTabsBlock.forEach(e => {
+        e.querySelector('button').click()
+    })
+
+
+
+
+
+
+
+    let scene, camera, renderer;
+    let model;
+
+    init();
+    animate();
+
+    function init() {
+        scene = new THREE.Scene();
+
+        const carConstructorElement = document.getElementById('car-constructor');
+        const width = carConstructorElement.offsetWidth;
+        const height = carConstructorElement.offsetHeight;
+
+        camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
+        camera.position.z = 5;
+
+        renderer = new THREE.WebGLRenderer({ alpha: true });
+        renderer.setSize(width, height);
+        carConstructorElement.appendChild(renderer.domElement);
+
+        const ambientLight = new THREE.AmbientLight(0x404040, 2);
+        scene.add(ambientLight);
+
+        const loader = new THREE.GLTFLoader();
+        loader.load('../assets/images/BYD_Song_L_BODY.glb', function (gltf) {
+            model = gltf.scene;
+            scene.add(model);
+        }, undefined, function (error) {
+            console.error(error);
+        });
+
+        // OrbitControls для вращения модели внутри блока
+        const controls = new THREE.OrbitControls(camera, renderer.domElement);
+        controls.addEventListener('change', render); // Используйте это, если есть необходимость в немедленном обновлении после вращения
+
+        window.addEventListener('resize', onWindowResize, false);
+    }
+
+    function onWindowResize() {
+        const carConstructorElement = document.getElementById('car-constructor');
+        const width = carConstructorElement.offsetWidth;
+        const height = carConstructorElement.offsetHeight;
+
+        camera.aspect = width / height;
+        camera.updateProjectionMatrix();
+
+        renderer.setSize(width, height);
+        render();
+    }
+
+    function animate() {
+        requestAnimationFrame(animate);
+        render();
+    }
+
+    function render() {
+        renderer.render(scene, camera);
+    }
+
+    renderer.shadowMap.enabled = true;
+    renderer.shadowMap.type = THREE.PCFSoftShadowMap; // Более мягкие тени
+
+    // Для каждого источника света, который должен создавать тени
+    light.castShadow = true;
+
+    // Для объектов, которые должны создавать и/или принимать тени
+    object.castShadow = true;
+    object.receiveShadow = true;
 });

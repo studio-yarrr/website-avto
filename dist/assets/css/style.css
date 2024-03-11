@@ -1921,6 +1921,16 @@ footer {
     margin-left: auto;
 }
 
+.catalog-block__tabs-swiper {
+    padding-bottom: 1rem !important;
+}
+
+#car-constructor {
+    width: 600px;
+    height: 400px;
+    margin: auto;
+}
+
 .catalog-block__tabs-buttons button {
     background: none;
     border: none;
