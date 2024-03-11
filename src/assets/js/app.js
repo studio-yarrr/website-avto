@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
         scene.add(ambientLight);
 
         const loader = new THREE.GLTFLoader();
-        loader.load('../assets/images/BYD_Song_L_BODY.glb', function (gltf) {
+        loader.load('./assets/images/BYD_Song_L_BODY.glb', function (gltf) {
             model = gltf.scene;
             scene.add(model);
         }, undefined, function (error) {
