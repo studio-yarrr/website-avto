@@ -128,6 +128,10 @@ document.addEventListener("DOMContentLoaded", () => {
         controls.addEventListener('change', render); // Используйте это, если есть необходимость в немедленном обновлении после вращения
 
         window.addEventListener('resize', onWindowResize, false);
+
+        const directionalLight = new THREE.DirectionalLight(0xffffff, 3);
+directionalLight.position.set(0, 1, 0); // x, y, z - свет идет сверху вниз
+scene.add(directionalLight);
     }
 
     function onWindowResize() {
@@ -151,13 +155,5 @@ document.addEventListener("DOMContentLoaded", () => {
         renderer.render(scene, camera);
     }
 
-    renderer.shadowMap.enabled = true;
-    renderer.shadowMap.type = THREE.PCFSoftShadowMap; // Более мягкие тени
-
-    // Для каждого источника света, который должен создавать тени
-    light.castShadow = true;
-
-    // Для объектов, которые должны создавать и/или принимать тени
-    object.castShadow = true;
-    object.receiveShadow = true;
+    
 });
