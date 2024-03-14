@@ -1,6 +1,11 @@
 .connection {
     display: flex;
     justify-content: space-between;
+
+    @include breakpoint($sm-bp) {
+        flex-direction: column;
+        gap: 4rem;
+    }
 }
 
 .connection__info {
@@ -9,6 +14,10 @@
     justify-content: space-between;
     width: 38%;
 
+    @include breakpoint($sm-bp) {
+        width: 100%;
+    }
+
     h2 {
         color: var(--black);
         font-family: Radiotechnika;
@@ -16,6 +25,11 @@
         font-weight: 400;
         line-height: 135%;
         letter-spacing: 0%;
+
+        @include breakpoint($sm-bp) {
+            font-size: 2.2rem;
+            line-height: 135%;
+        }
     }
 }
 
@@ -24,12 +38,21 @@
     flex-direction: column;
     gap: 2rem;
 
+    @include breakpoint($sm-bp) {
+        margin-top: 2rem;
+    }
+
     h3 {
         color: var(--black);
         font-size: 3.6rem;
         font-weight: 300;
         line-height: 4.5rem;
         letter-spacing: 0%;
+
+        @include breakpoint($sm-bp) {
+            font-size: 2rem;
+            line-height: 2.5rem;
+        }
     }
 
     p {
@@ -38,6 +61,11 @@
         font-weight: 200;
         line-height: 3rem;
         letter-spacing: 0%;
+
+        @include breakpoint($sm-bp) {
+            font-size: 1.8rem;
+            line-height: 2.3rem;
+        }
 
         span {
             font-weight: 400;
@@ -50,6 +78,10 @@
     flex-direction: column;
     gap: 2rem;
 
+    @include breakpoint($sm-bp) {
+        margin-top: 2rem;
+    }
+
     &>a {
         color: var(--black);
         font-size: 3.6rem;
@@ -57,6 +89,11 @@
         line-height: 4.5rem;
         letter-spacing: 0%;
         text-decoration: underline;
+
+        @include breakpoint($sm-bp) {
+            font-size: 2.4rem;
+            line-height: 3rem;
+        }
 
         &:first-child {
             text-decoration: none;
@@ -87,12 +124,23 @@
     gap: 3rem;
     width: 48%;
 
+    @include breakpoint($sm-bp) {
+        width: 100%;
+    }
+
     h3 {
         color: var(--black);
         font-size: 3.2rem;
         font-weight: 200;
         line-height: 4rem;
         letter-spacing: 0%;
+
+        @include breakpoint($sm-bp) {
+            width: 100%;
+
+            font-size: 1.8rem;
+            line-height: 2.3rem;
+        }
     }
 
     &>input {
@@ -105,6 +153,12 @@
         padding-bottom: 1rem;
         border-bottom: 0.1rem solid rgb(37, 35, 45, 0.4);
         outline: none;
+
+        @include breakpoint($sm-bp) {
+            font-size: 1.6rem;
+            font-weight: 200;
+            line-height: 2rem;
+        }
 
         &::placeholder {
             opacity: 0.5;
@@ -131,6 +185,11 @@
         line-height: 2.3rem;
         letter-spacing: 0%;
         cursor: pointer;
+
+        @include breakpoint($sm-bp) {
+            font-size: 1.2rem;
+            line-height: 1.5rem;
+        }
     }
 
     /* создание в label псевдоэлемента before со следующими стилями */
@@ -148,6 +207,12 @@
         background-repeat: no-repeat;
         background-position: center center;
         background-size: 50% 50%;
+
+        @include breakpoint($sm-bp) {
+            width: 2rem;
+            height: 2rem;
+            margin-right: 1rem;
+        }
     }
 
     /* стили для чекбокса, находящегося в состоянии checked */
@@ -173,12 +238,24 @@
         padding: 2rem 0;
         background: var(--light-blue);
         border: none;
+
+        @include breakpoint($sm-bp) {
+            font-size: 1.4rem;
+            line-height: 1.8rem;
+        }
+
+
     }
 }
 
 .connection__form-selects {
     display: flex;
     gap: 3rem;
+
+    @include breakpoint($sm-bp) {
+        flex-direction: column;
+        gap: 3rem;
+    }
 
 
     .custom-select {
@@ -205,6 +282,11 @@
         line-height: 3rem;
         letter-spacing: 0%;
         opacity: 0.5;
+
+        @include breakpoint($sm-bp) {
+            font-size: 1.6rem;
+            line-height: 2rem;
+        }
     }
 
     .select-options {
@@ -213,7 +295,7 @@
         left: 0;
         right: 0;
         background-color: #fff;
-        border: 1px solid #ccc;
+        border: 0.1rem solid #ccc;
         list-style: none;
         padding: 0;
         margin: 0;

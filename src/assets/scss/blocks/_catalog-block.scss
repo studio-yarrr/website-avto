@@ -9,6 +9,14 @@
     gap: 5rem;
     align-items: center;
 
+    @include breakpoint($xl-bp) {
+        flex-wrap: wrap;
+    }
+
+    @include breakpoint($sm-bp) {
+        gap: 1rem;
+    }
+
     .next-button {
         margin-left: auto;
     }
@@ -18,7 +26,7 @@
     padding-bottom: 1rem !important;
 }
 
-#car-constructor { width: 600px; height: 400px; margin: auto; }
+// #car-constructor { width: 600px; height: 400px; margin: auto; }
 
 .catalog-block__tabs-buttons {
 
@@ -32,6 +40,11 @@
         font-weight: 200;
         line-height: 135%;
         letter-spacing: 0%;
+
+        @include breakpoint($sm-bp) {
+            font-size: 1.8rem;
+            line-height: 135%;
+        }
 
         &.--active {
             color: var(--light-blue);
@@ -57,6 +70,10 @@
     width: 39rem;
     border-radius: 1rem;
     box-shadow: 3px 4px 3px 0px rgba(0, 0, 0, 0.25), 0px 1px 4px 0px rgba(0, 0, 0, 0.4), 6px 6px 2px 0px rgba(0, 0, 0, 0.05);
+
+    @include breakpoint($xl-bp) {
+        width: 100%;
+    }
 }
 
 .catalog-block__item-img {

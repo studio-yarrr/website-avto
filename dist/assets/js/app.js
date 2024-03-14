@@ -10696,12 +10696,21 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     let brandsSwiper = new Swiper(".brands-swiper", {
-        slidesPerView: 6,
+        slidesPerView: 4,
         spaceBetween: 30,
         pagination: {
             el: ".swiper-pagination",
             clickable: true,
         },
+        breakpoints: {
+            // when window width is >= 320px
+            1420: {
+                slidesPerView: 6,
+            },
+            1024: {
+                slidesPerView: 4,
+            },
+        }
     });
 
 
@@ -10733,8 +10742,17 @@ document.addEventListener("DOMContentLoaded", () => {
             e.classList.add('--active')
 
             let catalogBlockTabsSwiper = new Swiper(".catalog-block__tabs-swiper", {
-                slidesPerView: 4,
+                slidesPerView: 1,
                 spaceBetween: 20,
+                breakpoints: {
+                    // when window width is >= 320px
+                    1024: {
+                        slidesPerView: 4,
+                    },
+                    500: {
+                        slidesPerView: 2,
+                    },
+                }
             });
         })
     })
@@ -10746,73 +10764,84 @@ document.addEventListener("DOMContentLoaded", () => {
     })
 
 
+    var partnersSwiper = new Swiper(".partners-swiper", {
+        slidesPerView: 1.4,
+        spaceBetween: 30,
+        breakpoints: {
+            1024: {
+                slidesPerView: 4,
+            },
+            500: {
+                slidesPerView: 2.5,
+            },
+        }
+    });
 
 
 
 
+    // let scene, camera, renderer;
+    // let model;
 
-    let scene, camera, renderer;
-    let model;
+    // init();
+    // animate();
 
-    init();
-    animate();
+    // function init() {
+    //     scene = new THREE.Scene();
 
-    function init() {
-        scene = new THREE.Scene();
+    //     const carConstructorElement = document.getElementById('car-constructor');
+    //     const width = carConstructorElement.offsetWidth;
+    //     const height = carConstructorElement.offsetHeight;
 
-        const carConstructorElement = document.getElementById('car-constructor');
-        const width = carConstructorElement.offsetWidth;
-        const height = carConstructorElement.offsetHeight;
+    //     camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
+    //     camera.position.z = 5;
 
-        camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
-        camera.position.z = 5;
+    //     renderer = new THREE.WebGLRenderer({ alpha: true });
+    //     renderer.setSize(width, height);
+    //     carConstructorElement.appendChild(renderer.domElement);
 
-        renderer = new THREE.WebGLRenderer({ alpha: true });
-        renderer.setSize(width, height);
-        carConstructorElement.appendChild(renderer.domElement);
+    //     const ambientLight = new THREE.AmbientLight(0x404040, 2);
+    //     scene.add(ambientLight);
 
-        const ambientLight = new THREE.AmbientLight(0x404040, 2);
-        scene.add(ambientLight);
+    //     const loader = new THREE.GLTFLoader();
+    //     loader.load('./assets/images/BYD_Song_L_BODY.glb', function (gltf) {
+    //         model = gltf.scene;
+    //         scene.add(model);
+    //     }, undefined, function (error) {
+    //         console.error(error);
+    //     });
 
-        const loader = new THREE.GLTFLoader();
-        loader.load('./assets/images/BYD_Song_L_BODY.glb', function (gltf) {
-            model = gltf.scene;
-            scene.add(model);
-        }, undefined, function (error) {
-            console.error(error);
-        });
+    //     // OrbitControls для вращения модели внутри блока
+    //     const controls = new THREE.OrbitControls(camera, renderer.domElement);
+    //     controls.addEventListener('change', render); // Используйте это, если есть необходимость в немедленном обновлении после вращения
 
-        // OrbitControls для вращения модели внутри блока
-        const controls = new THREE.OrbitControls(camera, renderer.domElement);
-        controls.addEventListener('change', render); // Используйте это, если есть необходимость в немедленном обновлении после вращения
+    //     window.addEventListener('resize', onWindowResize, false);
 
-        window.addEventListener('resize', onWindowResize, false);
+    //     const directionalLight = new THREE.DirectionalLight(0xffffff, 3);
+    //     directionalLight.position.set(0, 1, 0); // x, y, z - свет идет сверху вниз
+    //     scene.add(directionalLight);
+    // }
 
-        const directionalLight = new THREE.DirectionalLight(0xffffff, 3);
-directionalLight.position.set(0, 1, 0); // x, y, z - свет идет сверху вниз
-scene.add(directionalLight);
-    }
+    // function onWindowResize() {
+    //     const carConstructorElement = document.getElementById('car-constructor');
+    //     const width = carConstructorElement.offsetWidth;
+    //     const height = carConstructorElement.offsetHeight;
 
-    function onWindowResize() {
-        const carConstructorElement = document.getElementById('car-constructor');
-        const width = carConstructorElement.offsetWidth;
-        const height = carConstructorElement.offsetHeight;
+    //     camera.aspect = width / height;
+    //     camera.updateProjectionMatrix();
 
-        camera.aspect = width / height;
-        camera.updateProjectionMatrix();
+    //     renderer.setSize(width, height);
+    //     render();
+    // }
 
-        renderer.setSize(width, height);
-        render();
-    }
+    // function animate() {
+    //     requestAnimationFrame(animate);
+    //     render();
+    // }
 
-    function animate() {
-        requestAnimationFrame(animate);
-        render();
-    }
+    // function render() {
+    //     renderer.render(scene, camera);
+    // }
 
-    function render() {
-        renderer.render(scene, camera);
-    }
 
-    
 });

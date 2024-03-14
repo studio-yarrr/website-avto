@@ -6,6 +6,12 @@
         font-weight: 400;
         line-height: 135%;
         letter-spacing: 0%;
+
+        @include breakpoint($sm-bp) {
+            font-size: 2.2rem;
+            line-height: 135%;
+        }
+
     }
 
 
@@ -16,12 +22,24 @@
     display: flex;
     gap: 3rem;
     justify-content: space-between;
+
+    @include breakpoint($xl-bp) {
+        flex-direction: column;
+    }
+
+    @include breakpoint($sm-bp) {
+        margin-top: 2rem;
+    }
 }
 
 .about-us-block__content-img {
     width: 49%;
     border-radius: 1rem;
     overflow: hidden;
+
+    @include breakpoint($xl-bp) {
+        width: 100%;
+    }
 
     img {
         width: 100%;
@@ -36,6 +54,10 @@
     gap: 2rem;
     width: 47%;
 
+    @include breakpoint($xl-bp) {
+        width: 100%;
+    }
+
     h3 {
         color: var(--black);
         font-size: 2.8rem;
@@ -47,6 +69,11 @@
         flex-wrap: wrap;
         gap: 0.6rem;
 
+        @include breakpoint($sm-bp) {
+            font-size: 1.8rem;
+            line-height: 135%;
+        }
+
         a {
             border: 0.2rem solid var(--light-blue);
             border-radius: 2rem;
@@ -57,6 +84,13 @@
             line-height: 135%;
             letter-spacing: 0%;
             padding: 0.5rem 3rem;
+
+            @include breakpoint($sm-bp) {
+                padding: 0.5rem 2rem;
+                font-size: 1.6rem;
+                line-height: 135%;
+
+            }
         }
     }
 
@@ -67,6 +101,11 @@
         font-weight: 200;
         line-height: 135%;
         letter-spacing: 0%;
+
+        @include breakpoint($sm-bp) {
+            font-size: 1.6rem;
+            line-height: 135%;
+        }
 
         a {
             display: inline;
@@ -82,6 +121,15 @@
     justify-content: space-between;
     margin-top: 5rem;
     gap: 14rem;
+
+    @include breakpoint($xl-bp) {
+        flex-direction: column;
+    }
+
+    @include breakpoint($sm-bp) {
+        margin-top: 4rem;
+        gap: 3rem;
+    }
 }
 
 .brands-text {
@@ -90,6 +138,10 @@
     gap: 0.8rem;
     width: 32%;
 
+    @include breakpoint($xl-bp) {
+        width: 100%;
+    }
+
     p:first-of-type {
         color: var(--black);
         font-family: Radiotechnika;
@@ -97,6 +149,11 @@
         font-weight: 400;
         line-height: 135%;
         letter-spacing: 0%;
+
+        @include breakpoint($sm-bp) {
+            font-size: 3.2rem;
+            line-height: 135%;
+        }
 
         span {
             font-size: 8rem;
@@ -109,5 +166,20 @@
         font-weight: 200;
         line-height: 135%;
         letter-spacing: 0%;
+
+        @include breakpoint($sm-bp) {
+            font-size: 1.6rem;
+            line-height: 135%;
+        }
+    }
+}
+
+.brands-swiper {
+    width: 100%;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }

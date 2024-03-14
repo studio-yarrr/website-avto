@@ -2,11 +2,20 @@
     display: flex;
     justify-content: space-between;
 
+    @include breakpoint($xl-bp) {
+        flex-direction: column;
+        gap: 4rem;
+    }
 
 }
 
 .main-title-block__content {
     width: 40%;
+
+    @include breakpoint($xl-bp) {
+        width: 100%;
+    }
+
 
     div {
         display: flex;
@@ -19,6 +28,11 @@
             font-weight: 500;
             line-height: 3rem;
             letter-spacing: 0%;
+
+            @include breakpoint($sm-bp) {
+                font-size: 1.6rem;
+                line-height: 2rem;
+            }
         }
 
         svg {
@@ -36,6 +50,11 @@
         letter-spacing: 0%;
         text-align: left;
         margin-top: 4rem;
+
+        @include breakpoint($sm-bp) {
+            font-size: 2.2rem;
+            line-height: 135%;
+        }
     }
 
     ul {
@@ -43,6 +62,11 @@
         flex-direction: column;
         gap: 2.7rem;
         margin-top: 4rem;
+
+        @include breakpoint($sm-bp) {
+            margin-top: 3rem;
+            gap: 2rem;
+        }
 
         li {
             display: flex;
@@ -54,6 +78,11 @@
             line-height: 3rem;
             letter-spacing: 0%;
             position: relative;
+
+            @include breakpoint($sm-bp) {
+                font-size: 1.6rem;
+                line-height: 2rem;
+            }
 
             div {
                 width: 1.8rem;
@@ -69,18 +98,37 @@
                 position: absolute;
                 top: 2rem;
                 left: 0.8rem;
+
+                @include breakpoint($sm-bp) {
+                    top: 1rem;
+                    height: 3rem;
+                }
             }
         }
     }
 
     a {
-        margin-top: 5.6rem; 
+        margin-top: 5.6rem;
+
+        @include breakpoint($sm-bp) {
+            margin-top: 3.2rem;
+        }
     }
 }
 
 .main-title-block__img {
     width: 60%;
     clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+
+    @include breakpoint($xl-bp) {
+        width: 100%;
+        clip-path: unset;
+    }
+
+    @include breakpoint($sm-bp) {
+        border-radius: 1rem;
+        overflow: hidden;
+    }
 
     img {
         width: 100%;

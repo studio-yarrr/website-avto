@@ -9,6 +9,11 @@
     letter-spacing: 0%;
     text-align: left;
 
+    @include breakpoint($sm-bp) {
+        font-size: 2rem;
+        line-height: 2.5rem;
+    }
+
     div {
         background: var(--light-blue);
         width: 5rem;
@@ -17,6 +22,11 @@
         align-items: center;
         justify-content: center;
         border-radius: 50%;
+
+        @include breakpoint($sm-bp) {
+            width: 4rem;
+            height: 4rem;
+        }
 
         svg {
             width: 1rem;
