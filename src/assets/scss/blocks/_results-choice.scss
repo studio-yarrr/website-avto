@@ -1,0 +1,14 @@
+.results-choice {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    border-bottom: 0.1rem solid rgba(162, 162, 162, 0.5);
+    padding-bottom: 3rem;
+
+    .next-button {
+        margin-left: auto;
+        width: fit-content;
+        border: none;
+        background: none;
+    }
+}

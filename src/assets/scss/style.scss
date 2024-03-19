@@ -42,6 +42,21 @@ body {
   }
 }
 
+.page-margin {
+  margin-left: 13.5rem;
+  margin-right: 13.5rem;
+
+  @include breakpoint($xl-bp) {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+
+  @include breakpoint($sm-bp) {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
+
 .mt-20 {
   margin-top: 20rem;
 
@@ -82,3 +97,6 @@ body {
 @import './blocks/partners-block.scss';
 @import './blocks/answers.scss';
 @import './blocks/connection.scss';
+@import './blocks/breadcrumbs.scss';
+@import './blocks/results-choice.scss';
+@import './blocks/results.scss';

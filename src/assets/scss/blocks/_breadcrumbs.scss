@@ -1,0 +1,21 @@
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+
+    a,
+    p {
+        color: rgb(37, 35, 45);
+        font-family: Geologica;
+        font-size: 1.6rem;
+        font-weight: 100;
+        line-height: 2rem;
+        letter-spacing: 0%;
+    }
+
+    svg {
+        fill: transparent;
+        width: 0.8rem;
+        height: 1.7rem;
+    }
+}

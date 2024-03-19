@@ -1,0 +1,118 @@
+.results {
+    margin-top: 5rem;
+
+    h2 {
+        color: rgb(37, 35, 45);
+        font-family: Geologica;
+        font-size: 3.6rem;
+        font-weight: 500;
+        line-height: 135%;
+        letter-spacing: 0%;
+    }
+}
+
+.results__catalog {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin-top: 4rem;
+
+    a {
+        width: 38.5rem;
+    }
+}
+
+.results__menu {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    ul {
+        display: flex;
+        gap: 5rem;
+
+        li {
+            color: rgb(37, 35, 45);
+            font-family: Geologica;
+            font-size: 2.4rem;
+            font-weight: 200;
+            line-height: 135%;
+            letter-spacing: 0%;
+
+            svg {
+                width: 2.5rem;
+                height: 2.3rem;
+            }
+        }
+
+        .--active {
+            color: var(--light-blue);
+        }
+    }
+}
+
+
+.results__menu-sort {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    &>p {
+        color: rgb(37, 35, 45);
+        font-family: Geologica;
+        font-size: 2.4rem;
+        font-weight: 200;
+        line-height: 135%;
+        letter-spacing: 0%;
+        text-align: center;
+    }
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+    gap: 1rem;
+
+
+    a {
+        color: var(--black);
+        font-family: Geologica;
+        font-size: 3rem;
+        font-weight: 200;
+        line-height: 135%;
+        letter-spacing: 0%;
+
+        &.--active {
+            background: var(--light-blue);
+            color: var(--white);
+            width: 5rem;
+            height: 5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &:last-of-type {
+            background: rgba(240, 240, 240, 0.9);
+            width: 5rem;
+            height: 5rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            svg {
+                stroke: var(--light-blue);
+                width: 0.9rem;
+                height: 1.8rem;
+            }
+        }
+    }
+
+
+
+}

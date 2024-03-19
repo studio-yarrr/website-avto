@@ -501,6 +501,25 @@ body {
     }
 }
 
+.page-margin {
+    margin-left: 13.5rem;
+    margin-right: 13.5rem;
+}
+
+@media (max-width: 1024px) {
+    .page-margin {
+        margin-left: 5rem;
+        margin-right: 5rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .page-margin {
+        margin-left: 2rem;
+        margin-right: 2rem;
+    }
+}
+
 .mt-20 {
     margin-top: 20rem;
 }
@@ -3347,4 +3366,178 @@ footer {
 
 .connection__form-selects .select-options li:hover {
     background-color: #f2f2f2;
+}
+
+.breadcrumbs {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.breadcrumbs a,
+.breadcrumbs p {
+    color: rgb(37, 35, 45);
+    font-family: Geologica;
+    font-size: 1.6rem;
+    font-weight: 100;
+    line-height: 2rem;
+    letter-spacing: 0%;
+}
+
+.breadcrumbs svg {
+    fill: transparent;
+    width: 0.8rem;
+    height: 1.7rem;
+}
+
+.results-choice {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 3rem;
+    border-bottom: 0.1rem solid rgba(162, 162, 162, 0.5);
+    padding-bottom: 3rem;
+}
+
+.results-choice .next-button {
+    margin-left: auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    border: none;
+    background: none;
+}
+
+.results {
+    margin-top: 5rem;
+}
+
+.results h2 {
+    color: rgb(37, 35, 45);
+    font-family: Geologica;
+    font-size: 3.6rem;
+    font-weight: 500;
+    line-height: 135%;
+    letter-spacing: 0%;
+}
+
+.results__catalog {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin-top: 4rem;
+}
+
+.results__catalog a {
+    width: 38.5rem;
+}
+
+.results__menu {
+    margin-top: 2rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.results__menu ul {
+    display: -ms-flexbox;
+    display: flex;
+    gap: 5rem;
+}
+
+.results__menu ul li {
+    color: rgb(37, 35, 45);
+    font-family: Geologica;
+    font-size: 2.4rem;
+    font-weight: 200;
+    line-height: 135%;
+    letter-spacing: 0%;
+}
+
+.results__menu ul li svg {
+    width: 2.5rem;
+    height: 2.3rem;
+}
+
+.results__menu ul .--active {
+    color: var(--light-blue);
+}
+
+.results__menu-sort {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.results__menu-sort > p {
+    color: rgb(37, 35, 45);
+    font-family: Geologica;
+    font-size: 2.4rem;
+    font-weight: 200;
+    line-height: 135%;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+.pagination {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 4rem;
+    gap: 1rem;
+}
+
+.pagination a {
+    color: var(--black);
+    font-family: Geologica;
+    font-size: 3rem;
+    font-weight: 200;
+    line-height: 135%;
+    letter-spacing: 0%;
+}
+
+.pagination a.--active {
+    background: var(--light-blue);
+    color: var(--white);
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.pagination a:last-of-type {
+    background: rgba(240, 240, 240, 0.9);
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.pagination a:last-of-type svg {
+    stroke: var(--light-blue);
+    width: 0.9rem;
+    height: 1.8rem;
 }
