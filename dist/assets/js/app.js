@@ -10660,6 +10660,35 @@ document.addEventListener("DOMContentLoaded", () => {
     }));
     //# sourceMappingURL=swiper-bundle.js.map
 
+    SmoothScroll({
+        // Время скролла 400 = 0.4 секунды
+        animationTime: 800,
+        // Размер шага в пикселях 
+        stepSize: 75,
+
+        // Дополнительные настройки:
+
+        // Ускорение 
+        accelerationDelta: 30,
+        // Максимальное ускорение
+        accelerationMax: 2,
+
+        // Поддержка клавиатуры
+        keyboardSupport: true,
+        // Шаг скролла стрелками на клавиатуре в пикселях
+        arrowScroll: 50,
+
+        // Pulse (less tweakable)
+        // ratio of "tail" to "acceleration"
+        pulseAlgorithm: true,
+        pulseScale: 4,
+        pulseNormalize: 1,
+
+        // Поддержка тачпада
+        touchpadSupport: true,
+    })
+
+
     function initializeCustomSelect(selectContainer) {
         const select = selectContainer.querySelector('.my-select');
         const selectTrigger = selectContainer.querySelector('.select-trigger');
@@ -10775,6 +10804,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 slidesPerView: 2.5,
             },
         }
+    });
+
+    let contactsPortfolioSwiper = new Swiper(".contacts__portfolio-swiper", {
+        slidesPerView: 4,
+        spaceBetween: 30,
     });
 
 
